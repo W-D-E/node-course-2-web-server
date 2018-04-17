@@ -63,6 +63,18 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/help', (req, res) => {
+  res.render('about.hbs',  {
+    pageTitle: 'Help Section'
+  });
+});
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Portfolio Page',
+    welcomeMessage: 'Have a look at all my projects!'
+  })
+});
+
 app.listen(port, () => {
   console.log(`[Node Server] --Server is up on port ${port}`);
 });
